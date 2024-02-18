@@ -4,7 +4,8 @@ import {
   Routes,
   Navigate,
 } from 'react-router-dom';
-import Layouts from './layouts/Layouts';
+import Layout from './layouts/Layouts';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -13,17 +14,25 @@ function App() {
         <Route
           path='/'
           element={
-            <Layouts>
+            <Layout>
               <p>Home page</p>
-            </Layouts>
+            </Layout>
           }
         />
         <Route
           path='/search'
           element={
-            <Layouts>
+            <Layout>
               <p>Search page</p>
-            </Layouts>
+            </Layout>
+          }
+        />
+        <Route
+          path='/register'
+          element={
+            <Layout>
+              <Register />
+            </Layout>
           }
         />
         <Route path='*' element={<Navigate to='/' />} />
