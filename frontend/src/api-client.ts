@@ -5,6 +5,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const register = async (fromData: RegisterFormData) => {
   const response = await fetch(`${API_BASE_URL}/api/users/register`, {
     method: 'POST',
+    credentials: 'include', // includes http cookies along with the request
     headers: {
       'Content-Type': 'application/json',
     },
