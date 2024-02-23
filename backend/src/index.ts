@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import userRoutes from './routes/users.route';
 import authRoutes from './routes/auth.route';
 import cookiesParser from 'cookie-parser';
+import path from 'path';
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
 
@@ -18,6 +19,8 @@ app.use(
     credentials: true, // the url must include credentials http cookies in the header
   })
 );
+
+app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
