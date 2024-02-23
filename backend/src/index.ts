@@ -25,4 +25,3 @@ app.use('/api/users', userRoutes);
 app.listen(7000, () => {
   console.log('Server is running on localhost:7000');
 });
-//
