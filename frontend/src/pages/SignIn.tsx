@@ -18,7 +18,6 @@ const SignIn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<SignInFormData>();
-
   const mutation = useMutation(apiClient.signIn, {
     onSuccess: async () => {
       showToast({ message: 'Sign in Successful!', type: 'SUCCESS' });
