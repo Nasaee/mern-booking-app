@@ -7,8 +7,9 @@ import authRoutes from './routes/auth.route';
 import cookiesParser from 'cookie-parser';
 import path from 'path';
 import { v2 as cloudinary } from 'cloudinary';
-import myHotelsRoutes from './routes/my-hotels.route';
+import myHotelRoutes from './routes/my-hotels.route';
 
+// cloudinary is website that allows us to upload images
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -32,7 +33,7 @@ app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/my-hotels', myHotelsRoutes);
+app.use('/api/my-hotels', myHotelRoutes);
 
 app.listen(7000, () => {
   console.log('Server is running on localhost:7000');
