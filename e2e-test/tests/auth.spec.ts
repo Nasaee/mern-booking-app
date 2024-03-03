@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { Sign } from 'crypto';
 
 const UI_URL = 'http://localhost:5173/';
 
