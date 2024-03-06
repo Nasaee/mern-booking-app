@@ -1,8 +1,8 @@
-import { useQuery } from 'react-query';
-import { Link } from 'react-router-dom';
 import * as apiClient from '../api-client';
-import { BsBuilding, BsMap } from 'react-icons/bs';
 import { BiHotel, BiMoney, BiStar } from 'react-icons/bi';
+import { BsBuilding, BsMap } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { useQuery } from 'react-query';
 
 const MyHotels = () => {
   const { data: hotelData } = useQuery(
@@ -54,7 +54,7 @@ const MyHotels = () => {
               </div>
               <div className='border border-slate-300 rounded-sm p-3 flex items-center'>
                 <BiStar className='mr-1' />
-                {hotel.starRating} Star
+                {hotel.starRating} Star Rating
               </div>
             </div>
             <span className='flex justify-end'>
