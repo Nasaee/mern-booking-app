@@ -5,7 +5,6 @@ export type UserType = {
   firstName: string;
   lastName: string;
 };
-
 export type HotelType = {
   _id: string;
   userId: string;
